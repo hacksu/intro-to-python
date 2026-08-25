@@ -47,7 +47,7 @@ print(question)
 Run this program on the command line by typing `uv run quiz.py`. As you can see, whereas before we were printing a string, we are now printing a variable, and we are getting the string that was stored in that variable. In general, variable names give you a way to refer to data without writing all the data out; you can think of them as being automatically replaced by that data behind the scenes. Change it to something random and try again:
 
 ```python
-question = "In Monty Python and the Holy Grail, what do the knights use instead of horses?"
+question = "What do the knights in Monty Python and the Holy Grail use instead of horses?"
 print(question)
 ```
 
@@ -60,7 +60,7 @@ Now, if I'm going to store a whole quiz's worth of questions in a program, I wan
 ```python
 questions = [
     "Who originally developed Python?",
-    "In Monty Python and the Holy Grail, what do the knights use instead of horses?",
+    "What do the knights in Monty Python and the Holy Grail use instead of horses?",
     "What number do programmers start counting from?",
 ]
 ```
@@ -284,7 +284,7 @@ Each line of the file holds one question, with the prompt, the answer, and the c
 
 ```
 Who originally developed Python?,Guido van Rossum,Python
-In Monty Python and the Holy Grail, what do the knights use instead of horses?,Coconuts,Movies
+What do the knights in Monty Python and the Holy Grail use instead of horses?,Coconuts,Movies
 What number do programmers start counting from?,0,Python
 ```
 
