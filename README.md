@@ -1,4 +1,4 @@
-# Python from Scratch - How to Write a Computer Program
+# Introduction to Python
 
 ## Setup
 
