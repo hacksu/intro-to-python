@@ -26,6 +26,8 @@ Write that, and then save it. Then, leave the text editor open, but run your new
 
 Did that work? If it did: great! The boring part is over. Now we can start programming. The hardest part of running Python programs is often the setup, even in this case where it's a really simple one.
 
+[Python docs: Using the Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html)
+
 ## Variables and strings
 
 You may have noticed that we have now written a computer program. It outputs the words "Hello, World" into the command line in which it was run. The word "print" in computer programming actually means "output this text to the command line;" it used to involve printers, but since then, screens have been invented. The punctuation requirements here are pretty specific: you have to have the word "print", an open parenthesis, a quotation mark, some text, a closing quotation mark, and a closing parenthesis. All of this punctuation is part of an understandable system: I promise. And now we can start to pull it apart and understand how it works.
@@ -52,6 +54,8 @@ print(question)
 ```
 
 This works too.
+
+[Python docs: Strings](https://docs.python.org/3/tutorial/introduction.html#strings)
 
 ## Lists and for loops
 
@@ -80,6 +84,8 @@ for question in questions:
 ```
 
 This kind of loop is called a "for loop", and the idea is that it does something once for each item in a list. The first line kind of announces the loop; you use the keywords "for" and "in" and alongside them, you put the variable that's storing your list, and also, before that, a new variable name that will be used for each item in the list. For each of the values in that list, the lines of code that are indented will be run, with each successive list item available under the new variable name, "question", within them. (You can indent lines by pressing tab on your keyboard in front of them.)
+
+[Python docs: Lists](https://docs.python.org/3/tutorial/introduction.html#lists), [Python docs: for Statements](https://docs.python.org/3/tutorial/controlflow.html#for-statements)
 
 ## Built-in functions and numbers
 
@@ -122,6 +128,8 @@ print(max(number_of_questions, questions_squared))
 
 `min` is a function that takes two inputs and returns whichever is smaller. `max` is a function that does the same thing but returns whichever is larger. Also, look: I am putting function calls inside of function calls. When you do this, the results are evaluated from the inside out. On the inside, the call to max is basically replaced with its result, and then the call the print happens with that as its input. You can imagine the whole thing, `max(number_of_questions, questions_squared)` being replaced by the number 9, because that's the larger number: `print(max(number_of_questions, questions_squared))` becomes just `print(9)`.
 
+[Python docs: Built-in Functions](https://docs.python.org/3/library/functions.html)
+
 ## User input
 
 The problem is, it's too easy to figure out what the results of these function calls will be, because the values stored in the variables are completely predictable. To write a real computer program, we want them to change over time. To do this, let's create a new variable and learn one more function call that will completely change what our program is capable of.
@@ -150,6 +158,8 @@ print(new_question.upper())
 ```
 
 Structures that package functions and data together like strings and lists do are usually called objects.
+
+[Python docs: input()](https://docs.python.org/3/library/functions.html#input), [Python docs: String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
 
 ## Conditions: while loops and if statements
 
@@ -186,6 +196,8 @@ This code uses the magic words "if" and "else" and the function "len" that we lo
 Note that this is different from the condition in the while loop because we're not stopping the whole process based on it; we're printing an error message if what we want to be true isn't true, but the loop will still continue, so the user can try again. Aside from that, though, the types of conditions that can be used in while loops, in if statements, and in other places are all the same, and we could use a while loop with a greater-than symbol or an if statement with a not-equal-to symbol if we wanted.
 
 So, we now have the ability to feed our computer an infinite supply of trivia questions.
+
+[Python docs: More Control Flow Tools](https://docs.python.org/3/tutorial/controlflow.html)
 
 ## Custom functions
 
@@ -239,6 +251,8 @@ def check_answer(guess):
 Now, instead of the `print` code running if the guess and a stored answer are exactly equal, it will run if the guess is merely somewhere inside the answer. This means I can now just type "Python" and the game will happily tell me I got "Monty Python" right, without me ever typing the whole thing.
 
 So now, after much tumult and turmoil, we have a bad trivia game.
+
+[Python docs: Defining Functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)
 
 ## Named tuples for details
 
@@ -336,6 +350,10 @@ questions_in_category("Python")
 
 And now, if you uncomment (remove the "#" in front of) those input lines from before, you've got a real, playable trivia game: one that asks real questions, checks real answers, keeps score, and can be restocked with new questions just by editing a text file.
 
+[Python docs: namedtuple](https://docs.python.org/3/library/collections.html#collections.namedtuple), [Python docs: Reading and Writing Files](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files), [Python docs: the with statement](https://docs.python.org/3/reference/compound_stmts.html#the-with-statement)
+
 ## Conclusion
 
 We now have a Python program that quizzes you, keeps score, and loads its questions from a file. I imagine this will be helpful for all of your lucrative trivia-night careers. Along the way, we have learned about strings, variables, lists, loops, input, functions, objects, and reading from files. This was basically a semester-long introductory class in one session. In the future, you may want to learn about more of the classes and functions built into Python; you will probably want to create classes in which you can define custom functions that are attached to specific objects; and you may even want to know how to store your quiz data somewhere fancier than a text file, like an actual database. But this should give you a basic foundation for doing stuff with Python. Have fun.
+
+[Python docs: The Python Tutorial](https://docs.python.org/3/tutorial/index.html), [Python docs: Classes](https://docs.python.org/3/tutorial/classes.html)
